@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Change HTML Styling</title>
+    <style>
+        .pink{
+            background-color:pink;
+            color:white;
+            height:100px;
+            width:auto;
+        }
+        .turquoise{
+            background-color: turquoise;
+            color: white;
+            height: 100px;
+            width:700px;
+        }
+        .yellow{ 
+            background-color: yellow;
+            color:black;
+            height: 100px;
+            width: auto;
+        }
+        .favorite{
+            font-style:italic;
+            background-color:black;
+        }
+    
+    </style>
+    </head>
+    <body>
+        <div class="pink" id="pinkdiv">
+            <p>Pink</p>
+        </div>
+        <div class="turquoise" id="turquoisediv">
+            <p>Turquoise</p>
+        </div>
+        <div class="yellow" id="yellowdiv">
+            <p>Yellow</p>
+        </div>
+        <button id="button1">Change Pink content.</button>
+        <button id="button2">Change Turquoise content</button>
+        <button id="button3">Change Yellow content</button>
+        <script>
+        document.getElementById("button1").onclick=function(){
+            document.getElementById("pinkdiv").style.width="200px"
+        }
+        document.getElementById("button2").ondblclick
+        =function()
+        {
+            document.getElementById("turquoisediv").style.color="black"                
+                    
+        }
+        document.getElementById("button3").onclick
+        =function()
+        {
+            document.getElementById("yellowdiv").style.fontFamily="Tahoma";              
+                    
+        }
+        </script>
+
+
+
+
+
+    </body>
+</html>

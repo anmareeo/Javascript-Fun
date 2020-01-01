@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Change HTML Content</title>
+    <style>
+        .pink{
+            background-color:pink;
+            color:white;
+            height:100px;
+            width:auto;
+        }
+        .turquoise{
+            background-color: turquoise;
+            color: white;
+            height: 100px;
+            width:700px;
+        }
+        .yellow{ 
+            background-color: yellow;
+            color:black;
+            height: 100px;
+            width: auto;
+        }
+        .favorite{
+            font-style:italic;
+            background-color:black;
+        }
+    
+    </style>
+    </head>
+    <body>
+        <div class="pink" id="pinkdiv">
+            <p>Pink</p>
+        </div>
+        <div class="turquoise" id="turquoisediv">
+            <p>Turquoise</p>
+        </div>
+        <div class="yellow">
+            <p>Yellow</p>
+        </div>
+        <button id="button1">Change Pink content.</button>
+        <button id="button2">Change Turquoise content</button>
+        <script>
+        document.getElementById("button1").onclick=function(){
+            document.getElementById("pinkdiv").innerHTML ="<p>Pink is my favorite color!</p>";
+        }
+        document.getElementById("button2").ondblclick
+        =function()
+        {
+            document.getElementById("turquoisediv").innerHTML=                
+            "<h3>I like to combine turquoise with the following colors:</h3><ul><li>Red</li><li>Yellow</li><li>Black</li></ul>"        
+        }
+        </script>
+
+
+
+
+
+    </body>
+</html>

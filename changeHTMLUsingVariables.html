@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Change HTML Using Variables</title>
+    <style>
+        .pink{
+            background-color:pink;
+            color:white;
+            height:100px;
+            width:auto;
+        }
+        .turquoise{
+            background-color: turquoise;
+            color: white;
+            height: 100px;
+            width:700px;
+        }
+        .yellow{ 
+            background-color: yellow;
+            color:black;
+            height: 100px;
+            width: auto;
+        }
+        .favorite{
+            font-style:italic;
+            background-color:black;
+        }
+    
+    </style>
+    </head>
+    <body>
+        <div class="pink" id="pinkdiv">
+            <p>Pink</p>
+        </div>
+        <div class="turquoise" id="turquoisediv">
+            <p>Turquoise</p>
+        </div>
+        <div class="yellow" id="yellowdiv">
+            <p>Yellow</p>
+        </div>
+        <button id="button1">Change Pink style.</button>
+        <button id="button2">Change Turquoise style</button>
+        <button id="button3">Change Yellow content</button>
+        <script>
+           let color ='rgb(18, 149,68)';
+           document.getElementById("button1").onclick = function(){
+            document.getElementById ("pinkdiv").style.backgroundColor = color;
+           }
+           let x, y, z, turquoiseColor;
+           document.getElementById("button2").onclick = function(){
+            x = Math.round(Math.random()* 256);
+            y = Math.round(Math.random()* 256);
+            z = Math.round(Math.random()* 256);  
+            turquoiseColor = 'rgb(' + x + ', ' + y + ', ' + z + ')';
+            document.getElementById("turquoisediv").style.backgroundColor= turquoiseColor;
+            document.getElementById("turquoisediv").innerHTML = '<p>' + turquoiseColor + '</p>';
+           }
+          </script>
+
+
+
+
+
+    </body>
+</html>

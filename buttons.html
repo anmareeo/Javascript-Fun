@@ -1,0 +1,52 @@
+<!DOCTYPE <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Buttons</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href="/CSS/buttons.css"> -->
+        <!-- note: I tried to link a CSS sheet to style the buttons and changed id to class and js script to getElementByClass, but the Javascript would not work. I will have to figure this out later. -->
+    </head>
+    <body>
+        <p>Javascript.</p>
+        <button onClick="alert('How can I help you?')">Click me.</button>
+        <br>
+        <br>
+        <button id="button2">Click me.</button>
+        <br>
+        <br>
+        <button id="button3"> Double click me.</button></div>
+        <br>
+        <br>
+        <button id="button4">Mouse over me.</button>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+        document.getElementById("button2").onclick=function()
+        {
+        alert("You have just clicked me!");
+        }
+        </script> 
+        <script>
+            document.getElementById("button3").ondblclick=function()
+            {
+            alert("You have just double clicked me!");
+            }
+            </script> 
+
+        <script>
+            document.getElementById("button4").onmouseover=function()
+            {
+            alert("You have just moused over me!");
+        }
+    </script> 
+        
+    </body>
+</html>

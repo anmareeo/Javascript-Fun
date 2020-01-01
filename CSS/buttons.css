@@ -1,0 +1,17 @@
+.button2{
+    font-size: larger;
+}
+
+.button3{
+    background-color: pink;
+    color:black;
+    font-size: 50px
+}
+
+.button4{
+    background-color: yellow;
+    color:red;
+    border:70px turquoise ridge;
+    font-size: 80px;
+}
+
