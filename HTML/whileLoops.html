@@ -1,0 +1,46 @@
+<!DOCTYPE <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>While Loops</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <p id="myParagraph">JavaScript.</p>
+        <button onclick="initiateGame()">Start</button>
+        <div id="balance">Current balance: $1,000</div>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+      
+        <script>
+         let i= 0;
+       while (i<5){
+        document.getElementById("myParagraph").innerHTML += "<br /> " + i;i++;
+       }
+       function initiateGame() {
+       let balance = 1000;
+       let itemsBought = 0;
+       while(balance>0){
+           let itemPrice = Math.floor(Math.random()*100);
+        if(itemPrice<=balance){
+            itemsBought += 1;
+            balance -= itemPrice;
+            document.getElementById("balance").innerHTML += "<p> Purchase amount: $" + itemPrice +".New balance: $" + balance + ".</p>";}
+        }
+            document.getElementById("balance").innerHTML += "<p> You bought " + itemsBought +" items.</p>";
+        }
+       
+       
+
+        //while loops  to execute a piece of code as long as a condition is true.
+        </script>
+    </body>
+</html>
