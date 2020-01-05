@@ -1,0 +1,39 @@
+<!DOCTYPE <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Object Constructors</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <p>JavaScript.</p>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+       
+        <script>
+            //movie is the constructor and what follows in the () are its parameters.
+            //to add a new property/parameter to the movie constructor type movie.prototype.yearReleased = "2005"
+            function movie(title, genre, rating, score, inEnglish) {
+                this.title = title;
+                this.genre = genre;
+                this.rating = rating;
+                this.score = score;
+                this.inEnglish = inEnglish;
+            }
+            //new is a javascript keyword
+            let movie1 = new Movie  ("Just Friends", "RomCom", "PG-13", 5, true)
+
+            //to add a new property to the object type the objectname.newproperty = "2005" -- so for the object above it would be movie1.yearReleased = "2005"
+
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Arrays</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <p id="myParagraph">JavaScript.</p>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+       
+        <script>
+       let shoppingList = ["milk", "bread", "eggs", "apples"]
+          //another way of defining an array is to use a constructor is
+        //let shoppingList = new Array("milk", "bread", "eggs", "apples")
+        //the first way is the better way.
+       // document.getElementById("myParagraph").innerHTML += "<br />"  + shoppingList;
+        //to access one item in the array, use index(the order of the item starting with 0. So to access milk type as shown below)
+       // document.getElementById("myParagraph").innerHTML += "<br />"  + shoppingList[0];
+        //to access apples
+       // document.getElementById("myParagraph").innerHTML += "<br />"  + shoppingList[3];
+        //there is a faster way to access these and it is by creating a function with a parameter(named anything such as x or food or whatever)
+
+        showResult(shoppingList);
+        showResult(shoppingList[1]);
+        showResult(shoppingList[2]);
+
+        
+        function showResult(food){
+            document.getElementById("myParagraph").innerHTML += "<br />"  + food;
+
+        }
+
+        //here is how to change an item on the shoppingList. Let's change eggs to chocolate and apples to blueberries;
+        shoppingList[2]="chocolate";
+        showResult(shoppingList);
+        shoppingList[3]="blueberries";
+        showResult(shoppingList);
+        //to delete an item we can use the javascript keyword delete. see below to delete the chocolate;
+        delete shoppingList[2];
+        showResult(shoppingList);
+        //the item disappears, but there is still a space for it because the commas remain. it will show as undefined if we try to alert it. See below:
+       // window.alert(shoppingList[2]);
+        //we can permanently get rid of that space using the splice method. Assign a new value to the item we deleted to bring it back. (we just deleted it as an example to show that deleting the item that way will still reserve its spot.)We will just call it the same thing as it was before. 
+        shoppingList[2] = "chocolate"
+        showResult(shoppingList);
+        
+       // The splice method is arrayname.splice( , ) and in the parentheses are two parameters. The first one is the index number of the item we want to delete, and the second is how many items we want to delete. Let's say now we want to delete the first item of milk, which is index 0. See below:
+       shoppingList.splice(0,1);
+       showResult(shoppingList);
+       //now we are left with bread, chocolate, blueberries. Let's say we want to add a few items between the chocolate and blueberries. We can use the splice function in a different way. Again, the two parameters in the parentheses are (the position we will start from, the number of items we want to delete). since we don't want to delete anything, the first parameter is 2 (because we want to start after chocolate, which now has the index of 1) second parameter will be zero. Then we will add more in the parentheses--the items we want to add after chocolate.
+       shoppingList.splice(2, 0, "chicken", "cucumbers");
+       showResult(shoppingList)
+       //now we want to sort the array in alphabetical order, so we will use the sort method, which automatically goes in alphabetical order, so we don't need anything in the ()
+       shoppingList.sort();
+       showResult(shoppingList);
+       //if we want to go in reverse starting at the end of the alphabet, we just use the reverse method as shown below:
+       shoppingList.reverse();
+       showResult(shoppingList);
+       //now let's create an array from a string. we will use the split method
+      // let myString = ("WXYZ");
+       //if we put nothing in the parentheses it shows WXYZ
+       //let myArray = myString.split();
+      // let myArray = myString.split("");
+       //if we put in the parentheses the quotes, it shows it in the form of an array W,X,Y,Z
+      // showResult(myArray);
+       //if we have spaces between letter of the string, each space will show up in the form of a comma:
+      // let myString = ("WX   YZ");
+     //  let myArray =myString.split("");
+     //  showResult(myArray);
+       //this shows W,X,,,Y,Z
+       //if we have a space between the quotes, each item in the array will have a comma after it--see below with a string of words:
+      // let myString = "I am so tired right now."
+     //  let myArray = myString.split(" ");
+     //  showResult(myArray);
+       //it shows I,am.so,tired,right,now.
+       //essentially, whenever there is a space in the array (not the string), it will create space for a new item inside the new array.
+       //there is another parameter we can add to the split method to show a limit to the number of items we want to have. see below:
+       let myString = "I am so tired right now."
+       let myArray = myString.split(" ",2);
+       showResult(myArray);
+       //with no space between the quotes it shows I,
+       //with a space between the quotes it shows I,am
+
+
+        
+
+
+
+            
+        </script>
+    </body>
+</html>
