@@ -2,7 +2,7 @@
 <html>
     <head>
     <meta charset="utf-8">
-    <title>Change HTML Using Variables</title>
+    <title>Functions</title>
     <style>
         .pink{
             background-color:pink;
@@ -39,22 +39,31 @@
         <div class="yellow" id="yellowdiv">
             <p>Yellow</p>
         </div>
-        <button id="button1">Change Pink style.</button>
-        <button id="button2">Change Turquoise style</button>
+        <button id="button1" onclick="swap('pinkdiv','turquoisediv')">Swap contents of Pink and Turquoise.</button>
+        <button id="button2" onclick="swap('turquoisediv','yellowdiv')">Swap Contents of Turquoise and Yellow</button>
         <button id="button3">Change Yellow content</button>
         <script>
-           let color ='rgb(18, 149,68)';
-           document.getElementById("button1").onclick = function(){
-            document.getElementById ("pinkdiv").style.backgroundColor = color;
+           function greeting1(){
+               window.alert("Hello!")
            }
-           let x, y, z, turquoiseColor;
-           document.getElementById("button2").onclick = function(){
-            x = Math.round(Math.random()* 256);
-            y = Math.round(Math.random()* 256);
-            z = Math.round(Math.random()* 256);  
-            turquoiseColor = 'rgb(' + x + ', ' + y + ', ' + z + ')';
-            document.getElementById("turquoisediv").style.backgroundColor= turquoiseColor;
-            document.getElementById("turquoisediv").innerHTML = '<p>' + turquoiseColor + '</p>';
+           greeting1();
+
+           function greeting2(firstName){
+               window.alert("Hello " + firstName +"!")
+           }
+           greeting2("Dolly");
+
+           function sum(a,b){
+               return a+b;
+           }
+           let x= sum(3,7);
+           window.alert(x);
+
+           function swap (id1, id2){
+               let y= document.getElementById(id1).innerHTML;
+               let z= document.getElementById(id2).innerHTML;
+           document.getElementById(id2).innerHTML = y;
+           document.getElementById(id1).innerHTML = z;
            }
           </script>
 
