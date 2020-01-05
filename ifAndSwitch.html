@@ -1,0 +1,78 @@
+<!DOCTYPE <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>If and Switch Statements</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <p>Speed on the freeway: <input id="speed" type= "number"/><button onClick="checkSpeed()">Check</button></p>
+
+        <p>Current season: <input id="myInput"/><button onClick="checkSeason()">Submit</button></p>
+        
+        
+       
+        <script>
+            //we are learning conditions now. what is meant by conditions? We are going to execute some code depending on some conditions that we cannot define ourselves. Here we want to send an alert to the user depending on the value.
+       // let speed = 80;
+        //the condition goes between the parentheses and in the curly brackets is the code to execute if the condition is true.
+      //  if(speed>70){
+        //    window.alert("You are going too fast!");
+            //with the speed at 50, the window did not pop up because the condition was not true. When we change the speed to 80, the alert window does pop up
+         //   let speed = 50;
+        //the condition goes between the parentheses and in the curly brackets is the code to execute if the condition is true.
+
+        //now let's add an alternative message to show if the condition is not true.
+      //  if(speed>70){
+      //      window.alert("You are going too fast!");
+      //  } else{
+        ////    window.alert("Your speed is fine.")
+      //  }
+        //the message changed depending on the speed
+
+        //now let's put in two conditions by using else if. So we can let them know if they are going too fast, and also if they are going to slow.
+        
+        //now we want to put all the info into a function because it will be based on the user's input.see the input tag above all these notes--at the top:
+        
+        function checkSpeed(){
+        let speed = document.getElementById("speed").value;
+        if(speed>70){
+            window.alert("You are going too fast!");
+        }  else if(speed<40){
+            window.alert("You are going too slow.")
+        } else {
+            window.alert("Your speed is fine.")
+        }}
+       // Now for the switch method, and we use case instead of else. You have to put break after each case so that it does not try to check all cases.
+
+        function checkSeason(){
+        let x = document.getElementById("myInput").value.toLowerCase();
+        switch(x){
+                case "summer":
+                window.alert("It is so hot outside!");
+                break;
+                case "winter":  
+                window.alert("It is so cold outside!");
+                break;
+                case "fall":  
+                window.alert("It is so windy outside!");
+                break;
+                case "spring":  
+                window.alert("It is so perfect outside!")
+                break;
+                default:
+                window.alert("This is not a valid entry.")
+
+        }}
+          //adding toLowerCase ensures that if the user types a capital letter, it will change it to lower case to match the case case.
+
+
+        </script>
+    </body>
+</html>
